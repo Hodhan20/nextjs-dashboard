@@ -216,3 +216,33 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+export function CustomersTableSkeleton() {
+  return (
+    <div className="mt-6 flow-root">
+      <div className="inline-block min-w-full align-middle">
+        <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
+          <table className="min-w-full text-gray-900">
+            <thead>
+              <tr>
+                <th className="px-4 py-5">Name</th>
+                <th className="px-4 py-5">Email</th>
+                <th className="px-4 py-5">Invoices</th>
+                <th className="px-4 py-5">Pending</th>
+                <th className="px-4 py-5">Paid</th>
+              </tr>
+            </thead>
+
+            <tbody className="bg-white">
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}

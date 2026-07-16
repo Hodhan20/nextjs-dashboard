@@ -41,7 +41,7 @@ async function seedInvoices() {
       date DATE NOT NULL
     );
   `;
-
+await sql`DELETE FROM invoices`;
   const insertedInvoices = await Promise.all(
     invoices.map(
       (invoice) => sql`
